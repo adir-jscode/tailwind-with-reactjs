@@ -15,12 +15,12 @@ const Navbar = () => {
     // const { name, link } = props.route;
     return (
         
-        <div>
-            <div onClick={()=>setOpen(!open)} className='h-6 w-6 md:hidden'>
+        <div className="bg-indigo-200">
+            <div onClick={()=>setOpen(!open)} className='h-6 w-6 md:hidden '>
                   {  open ? <XIcon></XIcon> :  <MenuIcon ></MenuIcon>}
             </div>
             <nav>
-                <ul className={`md:flex justify-center absolute duration-300 ease-in ${open ? "top-6" : "top-[-120px]"}`}>
+                <ul className={`md:flex bg-indigo-200 w-full justify-center absolute md:static duration-300 ease-in ${open ? "top-6" : "top-[-120px]"}`}>
                     
              {
                 routes.map(route =><Link key={route.id} route={route}></Link>)
